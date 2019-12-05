@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>알고말고</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="icon.png">
+  <link rel = "stylesheet" href = "menu.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+  var imgList = ["quick/quick1.gif", "quick/quick2.gif", "quick/quick3.gif", "quick/quick4.gif"]
+  var pos = 0;
+  function prevBtn(){
+    var quickImg = document.getElementById("quickImg");
+    if(pos<=0) return;
+    else pos--;
+    quickImg.src = imgList[pos];
+  }
+
+  function replayBtn(){
+    var quickImg = document.getElementById("quickImg");
+    quickImg.src = imgList[pos];
+  }
+
+  function nextBtn(){
+    var quickImg = document.getElementById("quickImg");
+    if(pos>=imgList.length-1) return;
+    else pos++;
+    quickImg.src = imgList[pos];
+  }
+</script>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-sm navbar-light">
+      <a class="navbar-brand" href="index.html">
+        <img src="name.jpg" alt="logo" style="width:160px;"> </a>
+  </nav>
+
+  <nav>
+    <div class="container-fluid">
+      <div class="row">
+        <nav class="col-2 d-none d-md-block bg-light sidebar">
+          <div class="sidebar-sticky">
+            <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="검색">
+              <ul class="nav flex-column">
+                <button class="dropdown-btn">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-bar-chart-2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                    정렬
+                </button>
+                <div class="dropdown-container">
+                  <a class="dropdown-item" href="selectionSort.html">선택정렬</a>
+                  <a class="dropdown-item" href="quickSort.html">퀵정렬</a>
+                </div>
+              </ul>
+            </div>
+        </nav>
+
+          <main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
+            <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+              <h1 class="h2">Quick Sort</h1>
+            </div>
+
+
+
+            <img src ="quick/quick1.gif" id="quickImg" style="width:800px;">
+            <br />
+
+            <div class='wrapper text-center'>
+            <div class="btn-group btn-group-lg" role="group">
+              <button type="button" onclick="prevBtn()" class="btn btn-default">
+                <span class="glyphicon glyphicon-repeat">prev</span></button>
+              <button type="button" onclick="replayBtn()" class="btn btn-default">
+                <img src="repeat.png" style="width:40px"></button>
+              <button type="button" onclick="nextBtn()" class="btn btn-default">next</button>
+            </div>
+            <div>
+
+
+            </div>
+          </main>
+        </div>
+      </div>
+
+  <script>
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+    var i;
+
+    for (i = 0; i < dropdown.length; i++) {
+      dropdown[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var dropdownContent = this.nextElementSibling;
+        if (dropdownContent.style.display === "block")
+          dropdownContent.style.display = "none";
+        else dropdownContent.style.display = "block";
+      });
+    }
+  </script>
+
+</body>
+</html>
