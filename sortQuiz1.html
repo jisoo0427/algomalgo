@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>알고말고</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="icon.png">
+  <link rel = "stylesheet" href = "menu.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm navbar-light" id="menunav">
+      <a class="navbar-brand" href="index.html">
+        <img src="name.jpg" alt="logo" style="width:160px;"> </a>
+  </nav>
+
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-1 sidenav text-left">
+      <button class="dropdown-btn"><img src="sortm.png" id="menuimg"/>정렬</button>
+      <div class="dropdown-container">
+        <a href="selectionSort.html">선택정렬</a><br/>
+        <a href="quickSort.html">퀵정렬</a><br/>
+        <a href="sortQuiz1.html">퀴즈</a>
+      </div><br />
+
+      <button class="dropdown-btn"><img src="search.png" id="menuimg"/>탐색</button>
+      <div class="dropdown-container">
+        <a href="#">이진탐색</a><br/>
+        <a href="#">DFS</a>
+      </div>
+    </div>
+
+    <div class="col-sm-10 text-left">
+      <h1>Quiz<img src ="" id="res" style="width:60px;"></h1>
+      <p>문제1. 다음 수들을 버블 정렬을 이용하여 오름차순으로 정렬할 경우 2회전 이후의 결과를 고르세요.<br />
+        <table border=1 width=200 height=30 align = "center">
+          <tr align="center">
+            <td>91, 27, 97, 38, 4</td>
+          </tr>
+        </table>
+
+
+
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="sortingQuiz1" id="exampleRadios1" value="option1">
+          <label class="form-check-label">
+          27, 4, 38, 91, 97
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="sortingQuiz1" id="exampleRadios2" value="option2">
+          <label class="form-check-label">
+          27, 38, 4, 91, 97
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="sortingQuiz1" id="exampleRadios3" value="option3">
+          <label class="form-check-label">
+          27, 91, 38, 4, 97
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="sortingQuiz1" id="exampleRadios4" value="option4">
+          <label class="form-check-label">
+          4, 38, 27, 91, 97
+          </label>
+        </div>
+
+        <button type="button" onclick="quiz1check()" class="btn btn-default" id="check">확인</button>
+        <button type="button" onclick="quiz1check()" class="btn btn-default" id="check">해설</button>
+        <a href="sortQuiz2.html" class="btn btn-lg btn-secondary">다음</a>
+
+    </div>
+
+  </div>
+</div>
+
+<script>
+function quiz1check(){
+  var select = document.getElementsByName("sortingQuiz1");
+  var res = document.getElementById("res");
+  if(select[1].checked==true) res.src = "right.png";
+  else res.src = "wrong.png";
+}
+</script>
+
+<script>
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+</script>
+
+
+</body>
+</html>

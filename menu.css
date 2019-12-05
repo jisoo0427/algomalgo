@@ -1,0 +1,104 @@
+/* Remove the navbar's default margin-bottom and rounded borders */
+#menunav{
+  border-bottom: 5px solid #C1E4FF;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+/* Set gray background color and 100% height */
+.sidenav {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: auto;
+  min-width: 150px;
+  background-color: #FFF;
+  border: 2px solid #C1E4FF;
+  height: 100%;
+  margin: 40px 2vw 0px 1vw;
+  padding: 15px 0px 15px 0px;
+}
+
+.dropdown-btn {
+  text-decoration: none;
+  font-size: 20px;
+  color: #4C4C4C;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+.row img{
+  width:20px;
+  margin-right: 10px;
+}
+
+
+.dropdown-container {
+  color: #4C4C4C;
+  font-size: 15px;
+  display: none;
+  padding-left: 20px;
+}
+
+.dropdown-container a{
+  color: #4C4C4C;
+  font-size: 15px;
+  text-align: left;
+}
+
+.active {
+  color: #4C4C4C;
+}
+
+/*본문*/
+.wrapper{
+  border: 2px solid #FFC000;
+  border-radius: 2%;
+}
+
+/* Right column (page content) */
+
+#mainImg {
+  display: block;
+  margin: 0px auto;
+  width: 40vw;
+}
+
+.col{
+  margin: 5px 0px 0px 10px;
+}
+
+h1{
+  font-family: "THE외계인설명서";
+  color: #41A0FB;
+}
+
+p{
+  font-size: 15pt;
+}
+
+td{
+  font-size: 20pt;
+}
+
+#check{
+  background-color: #41A0FB;
+  color: #FFF;
+}
+
+
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {height:auto;}
+}

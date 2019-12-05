@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Bootstrap Example</title>
+  <title>알고말고</title>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width">
+  <link rel="shortcut icon" href="icon.png">
+  <link rel = "stylesheet" href = "main.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
@@ -11,36 +13,56 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-  <!-- Brand/logo -->
-  <a class="navbar-brand" href="#">
-  알고말고
-  </a>
+<!--
+<a class="navbar-brand" href="#">Container</a>
 
-  <!-- Links -->
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link 1</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link 2</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link 3</a>
-    </li>
-  </ul>
+<div class="dropdown-divider"></div>
+</nav>-->
 
-  <form class="form-inline" action="/action_page.php">
-  <input class="form-control mr-sm-2" type="text" placeholder="Search">
-  <button class="btn btn-success" type="submit">Search</button>
-</form>
 
+<nav class="navbar navbar-expand-sm navbar-light" style="background-color:white;">
+  <div class="container">
+  <a class="navbar-brand" href="index.html">
+    <img src="name.jpg" alt="logo" style="width:160px;"> </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          수업
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="selectionSort.html">정렬</a>
+          <a class="dropdown-item" href="#">탐색</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
 </nav>
 
-<div class="container-fluid">
-  <h3>Brand / Logo</h3>
-  <p>When using the .navbar-brand class on images, Bootstrap 4 will automatically style the image to fit the navbar.</p>
-</div>
+<div class="jumbotron">
+    <div class="container">
+      <h2 class="openTxt">처음부터 배우는 알고리즘</h2>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="card" style="width:200px">
+      <img class="card-img-top" src="sort.png" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h2 class="card-title">정렬</h2>
+        <a href="quickSort.html" class="stretched-link"></a>
+      </div>
+    </div>
+  </div>
+
+</br>
+</br>
 
 </body>
 </html>

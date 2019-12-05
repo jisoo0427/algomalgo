@@ -1,0 +1,19 @@
+.jumbotron{
+  background-color: #C1E4FF !important;
+  height: 400px;
+  margin: 0px, 0px, 0px, 0px;
+  background-size: 30vw;
+  background-repeat: no-repeat;
+}
+
+.jumbotron h2{
+  font-family: "THE외계인설명서";
+  font-size: 6vw;
+  padding:
+  text-align: center;
+  color:#41A0FB;
+}
+
+.card-body{
+  padding: 0.3rem;
+}
